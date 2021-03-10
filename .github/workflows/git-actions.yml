@@ -10,8 +10,13 @@ jobs:  								# gather all the jobs that run in the workflow
 
       - name: Say Hello World       # Step 2: Type the word 'Hello World'
         run: echo 'Hello World'  	
-        
+
+      - name: Security vulnerabilities scan
+        uses: aufdenpunkt/python-safety-check@master  
+          
       - name: View a file           # Step 3: Two sub-steps involved
         run: |
            echo 'Viewing the file: '   
            cat requirements.txt 
+
+         
